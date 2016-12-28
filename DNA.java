@@ -19,6 +19,9 @@ public class DNA {
   }
 
   int count(char nucleotide){
+    if(!"AGCT".contains("" + nucleotide)){
+      throw new IllegalArgumentException();
+    }
     return this.nucleotide_count.get(nucleotide);
   }
 
