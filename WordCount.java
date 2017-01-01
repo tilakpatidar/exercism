@@ -14,8 +14,7 @@ public class WordCount {
       if(!word_count_map.containsKey(token)){
         word_count_map.put(token, 0);
       }
-      int count = word_count_map.get(token);
-      word_count_map.put(token, ++ count);
+      word_count_map.put(token, word_count_map.get(token) + 1);
     }
 
     return word_count_map;
